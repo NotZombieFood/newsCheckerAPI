@@ -23,6 +23,12 @@ from newspaper import Article
 app = Flask(__name__)
 CORS(app)
 
+name = 'articles.pk'
+
+articles = []
+
+with open(name, 'wb') as fi:
+    pickle.dump(articles, fi)
 
 def countWord(articulo, keyword):
     count = 0
