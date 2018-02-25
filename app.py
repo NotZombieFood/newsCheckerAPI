@@ -83,12 +83,12 @@ def checkArticle(noticia):
     text=re.split(' ',text)
     for i in range(len(text)):
         text[i] = text[i].strip('.,;:')
-    Economia = ["economia", "economico", "ahorro" ,  "parquedad",  "reducción",  "finanzas",  "bienes",  "capital",  "caudal",  "hacienda",  "heredad",  "patrimonio",  "peculio",  "pertenencias",  "posesiones",  "riqueza", "compra", "venta"]
-    Educativo=["educacion", "educativo", "enseñanza",  "instrucción",  "magisterio",  "aprendizaje",  "enseñanza",  "estudios",  "formación",  "adiestramiento",  "aprendizaje",  "entrenamiento",  "instrucción",  "urbanidad",  "enseñanza",  "pedagogía",  "sep"]
-    Internacional=["salud", "estado", "migracion", "inmigrantes", "arancel", "muro", "Trump", "extranjero", "comercio", "paises", "exportación", "importación", "inmigratorias", "politica", "tratado"]
-    Salud=["bienestar", "seguro", "imss", "salubridad", "sanidad", "cobertura", "discapacidad", "rehabilitacion", "salud", "subsidio", "prevención"]
-    Seguridad=["seguridad", "protección", "policía", "armado", "armadas", "arma", "crimen", "salvaguarda", "droga", "tráfico", "civil", "tiroteo", "defensa", "hacker"]
-    Ecologia=["ambiente", "reciclado", "ecosistema", "plantas", "bosque", "deforestación", "ecología", "cultivo", "xcaret"]
+    Economia = ["economia","economico","ahorro" , "parquedad", "reducción", "finanzas", "bienes", "capital", "caudal", "hacienda", "heredad", "patrimonio", "peculio", "pertenencias", "posesiones", "riqueza","compra","venta","banco","interés","inflación","devaluación","déficit","pobreza","empleo","desempleo","inversión","adqusición","adquisitivo","impuesto","pib","finanzas","igae","comercio","macroeconomía","macroeconómico","labor","valores","laboral","venta","compra","accionistas"]
+    Educativo=["educacion","educativo","enseñanza", "instrucción", "magisterio", "aprendizaje", "enseñanza", "estudios", "formación", "adiestramiento", "aprendizaje", "entrenamiento", "instrucción", "urbanidad", "enseñanza", "pedagogía", "sep"]
+    Internacional=["salud","estado","migracion","inmigrantes","arancel","muro","Trump","extranjero","comercio","paises","exportación","importación","inmigratorias","politica","tratado"]
+    Salud=["bienestar","seguro","imss","salubridad","sanidad","cobertura","discapacidad","rehabilitacion","salud","subsidio","prevención"]
+    Seguridad=["seguridad","protección","policía","armado","armadas","arma","crimen","salvaguarda","droga","tráfico","civil","tiroteo","defensa","hacker","inseguridad","corrupción","patrulla","violencia","asalto","fiscalía","desviación","delito","terroismo","terrorista","amenaza","acoso","ultimatum","cárcel","multa","penal"]
+    Ecologia=["ambiente","reciclado","ecosistema","plantas","bosque","deforestación","ecología","cultivo","fauna","natural","mar","océano","climático","desierto","árido","deshecho","pesticida","orgánico","consumo","conservación","xcaret"]
     contadores = {"economia": countWord(text,Economia),"educacion": countWord(text,Educativo),"internacional":countWord(text,Internacional), "salud":countWord(text,Salud),"seguridad":countWord(text,Seguridad),"ecologia":countWord(text,Ecologia)}
     mayor = max(contadores, key=contadores.get)
     amlo = ["amlo", "andres", "manuel","lopez","obrador"]
