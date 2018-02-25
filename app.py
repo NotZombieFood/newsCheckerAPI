@@ -66,6 +66,16 @@ def checkArticle(noticia):
         js = "No contamos con información suficiente"
     title = a.title
     text = a.text
+    texto = a.text
+    array = texto.split('\n')
+    print (array[0])
+    if (len(array[0])>15):
+        if(array[0]!=a.title):
+            resumen = array[0]
+        else:
+            resumen = array[1]
+    else:
+        resumen = array[2]
     lines = (line.strip() for line in text.splitlines())
     chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
     text = '\n'.join(chunk for chunk in chunks if chunk)
@@ -99,7 +109,8 @@ def checkArticle(noticia):
             'categoria': mayor,
             'confiable': js,
             'candidato': candidato,
-            'img':img
+            'img':img,
+            'resumen':resumen
         }
         array = getArticles()
         array.append(data)
