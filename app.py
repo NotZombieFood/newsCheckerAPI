@@ -13,6 +13,11 @@ import time
 import string
 import pickle
 from flask_cors import CORS
+import tldextract
+from urllib.request import urlopen
+import re
+import pickle
+from newspaper import Article
 
 # %% Flask app
 app = Flask(__name__)
