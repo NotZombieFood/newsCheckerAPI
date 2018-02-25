@@ -80,12 +80,16 @@ def checkArticle(noticia):
 	        'categoria': mayor,
 	        'confiable': js,
 	        'candidato': candidato,
-	        'img':img
+	        'img':img, 
+	        'url':noticia
 	    }
 		array = getArticles()
 		array.append(data)
 		saveArticles(array)
 		return js
 
-
+def obtenerFeed(candidato,categoria):
+	array = getArticles()
+	for i in range (array):
+		array[i].
 print(checkArticle("http://www.eluniversal.com.mx/columna/periodistas-el-universal/nacion/el-bronco-cabalga-en-redes-sociales"))
