@@ -112,6 +112,7 @@ def checkArticle(noticia):
             'img':img,
             'resumen':resumen
         }
+        print(data)
         array = getArticles()
         array.append(data)
         saveArticles(array)
@@ -121,7 +122,7 @@ def obtenerFeed(candidato,categoria):
     array = getArticles()
     respuesta = []
     count = 0
-    for i in range(array):
+    for i in range(len(array)):
         if(array[i]['candidato']==candidato):
             if(array[i]['categoria']):
                 if(array[i]['confiable']=="El sitio es confiable"):
