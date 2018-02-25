@@ -23,12 +23,6 @@ from newspaper import Article
 app = Flask(__name__)
 CORS(app)
 
-name = 'articles.pk'
-
-articles = []
-
-with open(name, 'wb') as fi:
-    pickle.dump(articles, fi)
 
 def countWord(articulo, keyword):
     count = 0
@@ -124,7 +118,7 @@ def obtenerFeed(candidato,categoria):
     count = 0
     for i in range(len(array)):
         if(array[i]['candidato']==candidato):
-            if(array[i]['categoria']):
+            if(array[i]['categoria']==categoria):
                 if(array[i]['confiable']=="El sitio es confiable"):
                     respuesta.append(array[i])
                     count=count+1
