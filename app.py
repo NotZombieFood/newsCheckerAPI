@@ -113,8 +113,9 @@ def obtenerFeed(candidato,categoria):
     for i in range(array):
         if(array[i]['candidato']==candidato):
             if(array[i]['categoria']):
-                respuesta.append(array[i])
-                count=count+1
+                if(array[i]['confiable']=="El sitio es confiable"):
+                    respuesta.append(array[i])
+                    count=count+1
         if count == 11:
             break
     js = json.dumps(respuesta)
