@@ -17,3 +17,4 @@ WooCommerce==1.2.1
 tldextract
 BeautifulSoup4
 newspaper3k 
+raven

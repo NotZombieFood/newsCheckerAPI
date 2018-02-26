@@ -18,9 +18,11 @@ from urllib.request import urlopen
 import re
 import pickle
 from newspaper import Article
+from raven.contrib.flask import Sentry
 
 # %% Flask app
 app = Flask(__name__)
+sentry = Sentry(app, dsn='https://4b608705c76b4416a261b73a56cb7e8b:eacb9e79531d4bff900df6ee416f6824@sentry.io/294207')
 CORS(app)
 
 name = 'articles.pk'
