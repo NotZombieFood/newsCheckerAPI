@@ -112,7 +112,8 @@ def checkArticle(noticia):
             'confiable': js,
             'candidato': candidato,
             'img':img,
-            'resumen':resumen
+            'resumen':resumen,
+            'url':noticia
         }
         print(data)
         array = getArticles()
