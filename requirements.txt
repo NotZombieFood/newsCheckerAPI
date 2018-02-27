@@ -18,3 +18,4 @@ tldextract
 BeautifulSoup4
 newspaper3k 
 raven
+blinker
