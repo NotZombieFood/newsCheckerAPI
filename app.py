@@ -63,9 +63,11 @@ def checkArticle(noticia):
     if hostname.domain in sitiosConfiables:
         js = "El sitio es confiable"
     elif hostname.domain in sitiosDesconfiables:
-        js = "No es confiable el sitio"
+        js = "NoConfiable"
+        return js
     else:
         js = "No contamos con información suficiente"
+        return js
     title = a.title
     text = a.text
     texto = a.text
@@ -117,8 +119,9 @@ def checkArticle(noticia):
         }
         print(data)
         array = getArticles()
-        array.append(data)
-        saveArticles(array)
+        if (data not in array):
+            array.append(data)
+            saveArticles(array)
     return js
 
 def obtenerFeed(candidato,categoria):
