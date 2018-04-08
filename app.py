@@ -150,7 +150,9 @@ def getparameters2():
 @app.route('/')
 def index():
     return "api is alive!"
-
+@app.route('/GET')
+def index2():
+    return "eu por aqui no!"
 
 @app.route('/FEED', methods=['GET'])
 def getparameters3():
